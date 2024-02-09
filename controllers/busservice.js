@@ -17,6 +17,12 @@ module.exports.deleteBusDetails = async (req, res) => {
   res.status(201).json({ data: dataObj });
 };
 
+module.exports.updateBusDetails = async (req, res) => {
+  const id = req.params.id;
+  const dataObj = await BusServices.update(req.body);
+  res.status(201).json({ data: dataObj });
+};
+
 module.exports.eachBusDetail = async (req, res) => {
   const id = req.params.id;
   console.log("id in eachBusDetail", id);
