@@ -21,6 +21,10 @@ const bookingSchema = new Schema({
     type: String,
     required: true,
   },
+  mobileNumber: {
+    type: String,
+    required: true,
+  },
   fare: {
     type: Number,
     required: true,
